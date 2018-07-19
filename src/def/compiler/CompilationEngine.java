@@ -496,6 +496,9 @@ public class CompilationEngine {
         //varDec
         //  'var' ('int'|'char'|'boolean'| className) varName (',' varName)* ';'
 
+        // TODO: Make a type of statement?
+        //      Then writing a function needs to change, as not all variables declared before function declaration made.
+
         if (inputTokenizer.tokenType() != TokenType.KEYWORD || inputTokenizer.keyWord() != KeyWord.VAR)
             throw new CompilationException("Expected keyword \'var\' in variable declaration!");
 
@@ -569,6 +572,9 @@ public class CompilationEngine {
         //  statement*
         //statement
         //  letStatement|ifStatement|whileStatement|doStatement|returnStatement
+
+        // TODO: expand definition of a statement to include statement block? ('{' statements '}')
+        //      This would change the definition of if and while statements.
 
         if (outputXML) {
             println("<statements>");
@@ -956,6 +962,8 @@ public class CompilationEngine {
     public void compileExpression() {
         //expression
         //  term (('+'|'-'|'*'|'/'|'&'|'|'|'<'|'>'|'=') term)*
+
+        // TODO: rewrite expression compilation to obey order of operations?
 
         if (outputXML) {
             println("<expression>");

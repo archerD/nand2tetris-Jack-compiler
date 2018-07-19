@@ -181,6 +181,8 @@ public class JackTokenizer {
 
                 break;
             case INT_CONSTANT:
+                // TODO: expand to allow binary/octal/hexadecimal numbers?
+
                 StringBuilder intBuilder = new StringBuilder();
 
                 // we already know the first character is valid

@@ -24,6 +24,13 @@ import java.util.Scanner;
  * Xxx.jack input file, the compiler creates a JackTokenizer and an output Xxx.vm file.
  * Next, the compiler uses the CompilationEngine, SymbolTable, and VMWriter modules
  * to write the output file.
+ *
+ * Ideas for V3:
+ * Some TODOs are already inside the JackTokenizer and CompilationEngine.
+ * Other ideas include a % operator, bit shifting operators, and improvements to the VMWriter code for efficiency.
+ * Also changes that allow the compiler to check if methods from other classes actually exists, and adding scope to methods/variables
+ * Maybe including the OS classes if they are not provided.
+ * Actually take file names from command line?!
  */
 public class JackCompiler {
     // ALGORITHM:
